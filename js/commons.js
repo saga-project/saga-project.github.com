@@ -15,7 +15,7 @@ document.write(text);
 function forkme()
 {
  
-var text = '<a href="http://github.com/saga-project/bliss"><img class="c2" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a> <script src=\'http://www.go2web20.net/twitterfollowbadge/1.0/badge.js\' type=\'text/javascript\'></script>'
+var text = '<a href="http://github.com/saga-project/bliss"><img class="c2" src="http://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>'
 
 document.write(text);
 }
@@ -23,7 +23,8 @@ document.write(text);
 function follow()
 {
 
-var text =  '<script type=\'text/javascript\' charset=\'utf-8\'>'
+var text =  '<script src=\'http://www.go2web20.net/twitterfollowbadge/1.0/badge.js\' type=\'text/javascript\'></script>'
+    text += '<script type=\'text/javascript\' charset=\'utf-8\'>'
     text += '    tfb.account = \'SAGAGridAPI\';'
     text += '    tfb.label = \'follow-us\';'
     text += '    tfb.color = \'#00aeef\';'
