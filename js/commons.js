@@ -5,7 +5,7 @@ var d = new Date();
 var date = d.getFullYear();    
 
 var text =  '<div class="group row"> <p class="c2">&copy; Copyright 2011-'+date+'&nbsp; <a href="http://saga-project.org">The SAGA Project</a></p>';
-    text += '<p class="c3">This work is funded by the following grants: <a href="http://nsf.rutgers.edu/2011/12/title-cdi-type-ii-mapping-complex.html">NSF-CHE 1125332 (CDI)</a>, <a href="http://lasigma.loni.org/">NSF-EPS 1003897 (LaSIGMA)</a>, <a href="http://sites.google.com/site/extenci/">NSF-OCI 1007115 (ExTENCI)</a>. Previous grants include: <a href="http://www.nsf.gov/pubs/2006/nsf06599/nsf06599.htm">NSF-OCI 0710874 (HPCOPS)</a>, NIH grant number P20RR016456 and UK EPSRC grant number GR/D0766171/1 (via <a href="http://www.omii.ac.uk/">OMII-UK</a>).</p>';
+    text += '<p class="c3">This work is funded by the following grants: <a href="http://nsf.rutgers.edu/2011/12/title-cdi-type-ii-mapping-complex.html">NSF-CHE 1125332 (CDI)</a>, <a href="http://lasigma.loni.org/">NSF-EPS 1003897 (LaSIGMA)</a>, <a href="http://sites.google.com/site/extenci/">NSF-OCI 1007115 (ExTENCI)</a>. Previous grants include: <a href="http://www.nsf.gov/pubs/2006/nsf06599/nsf06599.htm">NSF-OCI 0710874 (HPCOPS)</a>, NIH grant number P20RR016456 and UK EPSRC grant number GR/D0766171/1 via <a href="http://www.omii.ac.uk/">OMII-UK</a></p>';
     text += '<p class="c2"><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a></p></div>';
 
 document.write(text);
