@@ -44,8 +44,6 @@ button::-moz-focus-inner { border: 0; padding: 1px; }
 span.amp { font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; font-weight: normal; font-style: italic; font-size: 1.2em; line-height: 0.8; }
 h1,h2,h3,h4,h5,h6 { line-height: 1.1; }
 
-::selection { background: #745626; }
-::-moz-selection { background: #745626; }
 
 h1 a,
 h1 a:hover {
