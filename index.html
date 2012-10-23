@@ -1,70 +1,123 @@
-<!DOCTYPE html PUBLIC>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <head>
   <title>The SAGA Project &mdash; Distributed Computing Research</title>
   <!-- SAGA, Distributed, Cloud -->
-  <meta name="title"         content="The SAGA Project - A Simple API for Grid Applications: Implementations and Applications." />
-  <meta name="keywords"      content="SAGA,OGF,Distributed Computing,API" />
-  <meta name="robots"        content="index, follow" />
-  <meta name="revisit-after" content="1 month" />
+
+  <meta name="description"        content="SAGA-C++ - a SAGA implementation " />
+  <meta name="keywords"           content="SAGA,API,OGF,Grid Computing,Cloud Computing,Distributed Computing" />
+  <meta name="author"             content="SAGA-C++ team" />
+  <meta name="robots"             content="index, follow" />
+  <meta name="revisit-after"      content="1 month" />
+  <meta name="title"              content="The SAGA Project - A Simple API for Grid Applications: Implementations and Applications." />
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 
-  <link rel="stylesheet" href="./custom.css" type="text/css" media="screen" />
+  <link rel="shortcut icon"    href="./images/A_48.ico" />
+  <link rel="apple-touch-icon" href="./images/A_114.png" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/custom.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/fonts/ballpark/ballpark_weiner_webfont.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/lightbox.css" />
+
+  <script type="text/javascript" src="../js/prototype.js">                          </script>
+  <script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"> </script>
+  <script type="text/javascript" src="../js/lightbox.js">                           </script>
+  <script type='text/javascript' src='../js/commons.js'>                            </script>
+
+  <script type="text/javascript">
+   //<![CDATA[
+   var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-31597394-1']);
+       _gaq.push(['_trackPageview']);
+
+   (function() {
+     var ga   = document.createElement('script'); 
+     ga.type  = 'text/javascript'; 
+     ga.async = true;
+     ga.src   = ('https:' == document.location.protocol ? 'https://ssl' 
+                                                            : 'http://www') + '.google-analytics.com/ga.js';
+     var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+   //]]>
+  </script>
+
+  <style type="text/css">
+    /*<![CDATA[*/
+    img.c2  {position: absolute; top: 0; right: 0; border: 0;}
+    span.c1 {color: #e3d796;}
+    /*]]>*/
+  </style>
+
+  <style type="text/css">
+    /*<![CDATA[*/
+    p.c3 {text-align: justify; font-size: 14px;}
+    p.c2 {text-align: center}
+    p.c1 {text-align: justify}
+    /*]]>*/
+  </style>
 </head>
 
 <body>
-   <div id="header">
-     <h1>SAGA Project</h1>
-     <p id="subtitle"><strong>SAGA -- A Simple API for Grid Applications</strong></p>
-   </div>
+  <div id="wrap">
+    <div id="header">
+      <h1>SAGA Project</h1>
+      <p id="subtitle"><strong>SAGA -- A Simple API for Grid Applications</strong></p>
+    </div>
 
+    <ul>
+      <li>
+        <div class="group row">
+          <h2>What is SAGA</h2>
 
-   <hr/>
-   <h2>What is SAGA</h2>
+          <p>SAGA is a standardized API for developing distributed applications that
+          can run on grid and cloud infrastructure. The SAGA API has an emphasis on
+          job handling and monitoring, file transfer and management as well as
+          distributed orchestration mechanisms. The main goals of SAGA are:</p>
 
-   <p>SAGA is a standardized API for developing distributed applications that
-   can run on grid and cloud infrastructure. The SAGA API has an emphasis on
-   job handling and monitoring, file transfer and management as well as
-   distributed orchestration mechanisms. The main goals of SAGA are:</p>
+          <ul>
 
-   <ul>
+            <li> Provide a uniform access-layer to heterogeneous distributed computing
+            infrastructures and middleware
 
-     <li> Provide a uniform access-layer to heterogeneous distributed computing
-     infrastructures and middleware
+            <li> Provide a stable programming interface for distributed applications,
+            frameworks and tool development
 
-     <li> Provide a stable programming interface for distributed applications,
-     frameworks and tool development
+            <li> Lower the application deployment barrier on production
+            Cyber-Infrastructure
 
-     <li> Lower the application deployment barrier on production
-     Cyber-Infrastructure
+            <li> Provide the building blocks to enable the design and implementation
+            of higher-level abstractions in support of distributed application
+            requirements
 
-     <li> Provide the building blocks to enable the design and implementation
-     of higher-level abstractions in support of distributed application
-     requirements
+          </ul>
 
-   </ul>
+          <p>The aim of the SAGA Project is to guide and influence the evolution of the
+          standard and open source SAGA implementations and to promote SAGA as an
+          abstraction layer in the global distributed computing community.  TheProject
+          is associated with the  <a href= "http://radical.rutgers.edu">RADICAL Group</a> 
+          at the <a href= "http://nsfcac.rutgers.edu/">Cloud and Autonomic Computing Center</a> 
+          at Rutgers University.  </p>
 
-   <p>The aim of the SAGA Project is to guide and influence the evolution of the
-   standard and open source SAGA implementations and to promote SAGA as an
-   abstraction layer in the global distributed computing community.  TheProject
-   is associated with the  <a href= "http://radical.rutgers.edu">RADICAL Group</a> 
-   at the <a href= "http://nsfcac.rutgers.edu/">Cloud and Autonomic Computing Center</a> 
-   at Rutgers University.  </p>
+        </div>
+      </li>
 
-   <hr/>
-   <h2>Implementations</h2>
+      <li>
+        <div class="group row">
+          <h2>Implementations</h2>
 
-   <table border=0>
-     <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/bliss/">SAGA-Python:</a> </td><td> Under active development. </td> </tr>
-     <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/saga-cpp/">SAGA-C++:</a> </td><td> Completed and currently not under active development. </td> </tr>
-     <tr><td>&#8226; &nbsp;</td><td> <a href="http://grid.in2p3.fr/jsaga/">jSAGA:</a>                 </td><td> Under active development. </td> </tr>
-     <tr><td>&#8226; &nbsp;</td><td> <a href="http://www.cs.vu.nl/ibis/javagat.html">JavaSAGA: </a>   </td><td> another Java implementation, status uncertain. </td> </tr>
+          <table border=0>
+            <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/bliss/">SAGA-Python:</a> </td><td> Under active development. </td> </tr>
+            <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/saga-cpp/">SAGA-C++:</a> </td><td> Completed and currently not under active development. </td> </tr>
+            <tr><td>&#8226; &nbsp;</td><td> <a href="http://grid.in2p3.fr/jsaga/">jSAGA:</a>                 </td><td> Under active development. </td> </tr>
+            <tr><td>&#8226; &nbsp;</td><td> <a href="http://www.cs.vu.nl/ibis/javagat.html">JavaSAGA: </a>   </td><td> another Java implementation, status uncertain. </td> </tr>
+          </table>
 
-   </table>
-
-   <hr/>
-
+        </div>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
 
