@@ -1,125 +1,250 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The SAGA Project: Distributed Computing Research</title>
+    <!-- SAGA, Distributed, Cloud -->
 
-<head>
-  <title>The SAGA Project &mdash; Distributed Computing Research</title>
-  <!-- SAGA, Distributed, Cloud -->
+    <meta name="viewport"      content="width=device-width, initial-scale=1.0">
+    <meta name="description"   content="">
+    <meta name="title"         content="The SAGA Project: Distributed Computing Research">
+    <meta name="keywords"      content="SAGA,SAGA Python,SAGA-Python,GFD-90,OGF,Grid Computing,Cloud Computing,Python,API,Distributed Computing,Simple API for Grid Applications,XSEDE,FutureGrid,Ole Weidner,RADICAL,Rutgers,Distributed Applications,Shantenu Jha" />
+    <meta name="revisit-after" content="1 month" />
+    <meta name="author"        content="Ole Weidner">
 
-  <meta name="description"        content="SAGA-C++ - a SAGA implementation " />
-  <meta name="keywords"           content="SAGA,API,OGF,Grid Computing,Cloud Computing,Distributed Computing" />
-  <meta name="author"             content="SAGA-C++ team" />
-  <meta name="robots"             content="index, follow" />
-  <meta name="revisit-after"      content="1 month" />
-  <meta name="title"              content="The SAGA Project - A Simple API for Grid Applications: Implementations and Applications." />
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+    <!-- Le styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="css/docs.css"/>
+    <link rel="stylesheet" type="text/css" href="css/prettify.css"/>
 
-  <link rel="shortcut icon"    href="./images/A_48.ico" />
-  <link rel="apple-touch-icon" href="./images/A_114.png" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
 
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/custom.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/fonts/ballpark/ballpark_weiner_webfont.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/lightbox.css" />
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
 
-  <script type="text/javascript" src="../js/prototype.js">                          </script>
-  <script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"> </script>
-  <script type="text/javascript" src="../js/lightbox.js">                           </script>
-  <script type='text/javascript' src='../js/commons.js'>                            </script>
+  </head>
 
-  <script type="text/javascript">
-   //<![CDATA[
-   var _gaq = _gaq || [];
-       _gaq.push(['_setAccount', 'UA-31597394-1']);
-       _gaq.push(['_trackPageview']);
+  <body data-spy="scroll" data-target=".bs-docs-sidebar" onload="prettyPrint()" bgcolor="white">
 
-   (function() {
-     var ga   = document.createElement('script'); 
-     ga.type  = 'text/javascript'; 
-     ga.async = true;
-     ga.src   = ('https:' == document.location.protocol ? 'https://ssl' 
-                                                            : 'http://www') + '.google-analytics.com/ga.js';
-     var s    = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-   })();
-   //]]>
-  </script>
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">SAGA Project</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="smoothScroll" href="./index.html">Home</a>
+              </li>
 
-  <style type="text/css">
-    /*<![CDATA[*/
-    img.c2  {position: absolute; top: 0; right: 0; border: 0;}
-    span.c1 {color: #e3d796;}
-    /*]]>*/
-  </style>
+              <li class="">
+                <a class="smoothScroll" href="#sagapython">SAGA Python</a>
+              </li>
 
-  <style type="text/css">
-    /*<![CDATA[*/
-    p.c3 {text-align: justify; font-size: 14px;}
-    p.c2 {text-align: center}
-    p.c1 {text-align: justify}
-    /*]]>*/
-  </style>
-</head>
+              <li class="">
+                <a class="smoothScroll" href="#sagabigjob">SAGA BigJob</a>
+              </li>
 
-<body>
-  <div id="wrap">
-    <div id="header">
-      <h1>SAGA Project</h1>
-      <p id="subtitle"><strong>SAGA -- A Simple API for Grid Applications</strong></p>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <ul>
+<div class="jumbotron masthead">
+  <div class="container">
+    <h1>SAGA Project</h1>
+    <p>Promoting a Standards-Based, Abstraction-Driven Approach to Distributed Computing Software</p>
+    <!--p>
+      <a href="#getstarted" class="btn btn-primary btn-large smoothScroll" >Get Started</a>
+    </p>
+    <ul class="masthead-links">
       <li>
-        <div class="group row">
-          <h2>What is SAGA</h2>
-
-          <p>SAGA is a standardized API for developing distributed applications that
-          can run on grid and cloud infrastructure. The SAGA API has an emphasis on
-          job handling and monitoring, file transfer and management as well as
-          distributed orchestration mechanisms. The main goals of SAGA are:</p>
-
-          <ul>
-
-            <li> Provide a uniform access-layer to heterogeneous distributed computing
-            infrastructures and middleware
-
-            <li> Provide a stable programming interface for distributed applications,
-            frameworks and tool development
-
-            <li> Lower the application deployment barrier on production
-            Cyber-Infrastructure
-
-            <li> Provide the building blocks to enable the design and implementation
-            of higher-level abstractions in support of distributed application
-            requirements
-
-          </ul>
-
-          <p>The aim of the SAGA Project is to guide and influence the evolution of the
-          standard and open source SAGA implementations and to promote SAGA as an
-          abstraction layer in the global distributed computing community.  TheProject
-          is associated with the  <a href= "http://radical.rutgers.edu">RADICAL Group</a> 
-          at the <a href= "http://nsfcac.rutgers.edu/">Cloud and Autonomic Computing Center</a> 
-          at Rutgers University.  We maintain a central code repository at <a
-            href="http://github.com/saga-project">GitHub</a>.</p>
-
-        </div>
+        <a href="https://github.com/saga-project/SAGA-Python" >Visit the GitHub Project</a>
       </li>
+      <!--li>
+        <a href="./doc/index.html" >Documentation</a>
+      </li>
+      <!--li>
+        <a href="./extend.html" >Extend</a>
+      </li>
+    </ul-->
+  </div>
+</div>
 
+<div class="bs-docs-social">
+  <div class="container">
+    <ul class="bs-docs-social-buttons">
       <li>
-        <div class="group row">
-          <h2>Implementations</h2>
-
-          <table border=0>
-            <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/saga-python/">SAGA-Python:</a> </td><td> Under active development. </td> </tr>
-            <tr><td>&#8226; &nbsp;</td><td> <a href="http://saga-project.github.com/saga-cpp/">SAGA-C++:</a> </td><td> Completed and currently not under active development. </td> </tr>
-            <tr><td>&#8226; &nbsp;</td><td> <a href="http://grid.in2p3.fr/jsaga/">jSAGA:</a>                 </td><td> Under active development. </td> </tr>
-            <tr><td>&#8226; &nbsp;</td><td> <a href="http://www.cs.vu.nl/ibis/javagat.html">JavaSAGA: </a>   </td><td> another Java implementation, status uncertain. </td> </tr>
-          </table>
-
-        </div>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=saga-project&repo=SAGA-Python&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </li>
+      <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=saga-project&repo=SAGA-Python&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+      </li>
+      <li class="follow-btn">
+        <a href="https://twitter.com/sagagridapi" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @sagagridapi</a>
+      </li>
+      <li class="tweet-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://saga-project.github.com/SAGA-Python/" data-count="horizontal" data-via="sagagridapi" data-related="mdo:SAGA Python">Tweet</a>
       </li>
     </ul>
   </div>
-</body>
+</div>
+
+<div class="container">
+
+  <div class="marketing">
+
+    <!--h1>Introducing Bootstrap.</h1>
+    <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p-->
+
+    <div class="row-fluid">
+      <div class="span12">
+        <!--img class="marketing-img" src="img/bs-docs-twitter-github.png"-->
+        <br />
+        <br />
+        <h2>Introduction</h2>
+
+        <p class="marketing-byline">TAGLINE </p>
+
+            <p align="justify"> 
+
+            SAGA is a distributed computing standard which defines a high-level
+            interface to the most commonly used distributed computing
+            functionality.
+
+            The main goals of SAGA are:
+
+            </p>
+
+            <ul>
+              <li>Provide a uniform access-layer to heterogeneous distributed computing infrastructures and middleware</li>
+              <li>Provide a stable programming interface for distributed applications, frameworks and tool development</li>
+              <li>Lower the application deployment barrier on production Cyber-Infrastructure</li>
+              <li>Provide the building blocks to enable the design and implementation of higher-level abstractions in support of distributed application requirements</li>
+            </ul>
+
+            <p>
+
+            The SAGA-Project led by the <a href="http://radical.rutgers.edu">RADICAL Group
+            at Rutgers University</a> and is an ongoing effort to coordinate the standard
+            and open source SAGA implementations and to promote a standards-based and
+            abstraction-driven approach to distributed computing.
+
+            SAGA serves as the interoperability layer for multiple tools and applications, including SAGA-BigJob.
+    
+            </p>
+      </div>
+
+    </div>
+
+    <div class="row-fluid">
+
+
+      <div class="span6" id="sagapython">
+        <h2>SAGA Python</h2>
+
+        <p class="marketing-byline">A Light-Weight DCI Access Layer</p>
+
+        <p align="justify"> SAGA Python is a Python implementation of the OGF
+        SAGA (Simple API for Grid Application) standard. It provides a
+        high-level interface to the most commonly used distributed computing
+        functionality, like job schedulers, file transfer and resource
+        provisioning services. Given the heterogeneity of distributed infrastructure,
+        SAGA Python provides a much needed interoperability layer that lowers the 
+        complexity and improves the simplicity of using distributed infrastructure 
+        whilst enhancing the sustainability of distributed applications, services and tools.
+
+        </p>
+
+        <p align="justify"> 
+          <a href="http://saga-project.github.io/saga-python/" class="btn btn-primary btn-default">Project Website</a>
+        </p>
+
+      </div>
+
+      <div class="span6" id="sagabigjob">
+        <h2>SAGA BigJob</h2>
+
+        <p class="marketing-byline">A Pilot-based Job Management System</p>
+
+        <p align="justify"> BigJob is a flexible Pilot framework that takes
+        the headache out of job and data management for clusters, grids, and clouds.
+        BigJob is written in the Python programming language, and as such, is easily
+        deployable into user space. It allows user-level control of Pilots and
+        supports a wide range of application types. It is built on top of SAGA-Python, 
+        meaning BigJob works on a variety of backends such as
+        PBS, SGE, Amazon EC2, etc.
+        </p>
+
+        <p align="justify"> 
+          <a href="http://saga-project.github.io/BigJob/" class="btn btn-primary btn-default" >Project Website</a>
+        </p>
+      </div>
+
+
+    </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright &copy; 2013 The SAGA Project</p>
+        <p><a href="http://radical.rutgers.edu">RADICAL Research</a> at 
+          <a href="http://nsfcac.rutgers.edu">The Cloud and Autonomic Computing 
+          Center, Rutgers University </a>.</p>
+
+        <p>Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <!--ul class="footer-links">
+          <li><a href="https://github.com/saga-project/SAGA-Python/wiki">Wiki</a></li>
+          <li class="muted">&middot;</li>
+        </ul-->
+      </div>
+    </footer>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+
+
+    <!-- Le google analytics
+    ================================================== -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39225565-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+
+  </body>
 </html>
-
-
